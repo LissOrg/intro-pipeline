@@ -11,7 +11,7 @@ pipeline {
         stage('stage1Parallel') {
           steps {
             echo 'I am parallel'
-            sh 'npm --version'
+            sh 'java -version'
           }
         }
       }
