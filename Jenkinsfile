@@ -12,6 +12,14 @@ pipeline {
             echo "${TEST_USER_PSW}"
           }
         }
+        stage('Deploy') {
+          input {
+            message 'Should we continue?'
+          }
+          steps {
+            echo 'Continuing with deployment'
+          }
+        }
         stage('stage1Parallel') {
           steps {
             echo 'I am parallel'
