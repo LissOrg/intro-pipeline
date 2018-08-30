@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'jdk9'
+  }
   stages {
     stage('stage1') {
       parallel {
