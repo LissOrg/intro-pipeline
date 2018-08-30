@@ -8,6 +8,8 @@ pipeline {
         stage('stage1') {
           steps {
             echo "Hello ${MY_NAME}!"
+            echo "${TEST_USER_USR}"
+            echo "${TEST_USER_PSW}"
           }
         }
         stage('stage1Parallel') {
@@ -21,5 +23,6 @@ pipeline {
   }
   environment {
     MY_NAME = 'Liss'
+    TEST_USER = credentials('test-user')
   }
 }
