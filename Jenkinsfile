@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('stage1') {
       parallel {
-        stage('stage1') {
+        stage('stage2') {
           steps {
             echo "Hello ${MY_NAME}!"
             echo "${TEST_USER_USR}"
@@ -18,6 +18,11 @@ pipeline {
             sh 'java -version'
           }
         }
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'HI'
       }
     }
   }
