@@ -7,7 +7,7 @@ pipeline {
       parallel {
         stage('stage1') {
           steps {
-            echo 'Hello World!'
+            echo "Hello ${MY_NAME}!"
           }
         }
         stage('stage1Parallel') {
@@ -18,5 +18,8 @@ pipeline {
         }
       }
     }
+  }
+  environment {
+    MY_NAME = 'Liss'
   }
 }
